@@ -1,4 +1,4 @@
-package kr.co.plani.csi;
+package kr.co.plani;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
