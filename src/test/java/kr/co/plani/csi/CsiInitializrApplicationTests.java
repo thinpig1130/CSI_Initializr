@@ -1,4 +1,4 @@
-package kr.co.plani.csi_initializr;
+package kr.co.plani.csi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
