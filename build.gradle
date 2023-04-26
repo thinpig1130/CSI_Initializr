@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.11'
+    id 'org.springframework.boot' version '2.7.0'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
@@ -10,10 +10,31 @@ sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://maven.egovframe.go.kr/maven/"
+        metadataSources {
+            artifact()
+        }
+    }
 }
 
 dependencies {
+
+    // 전자정부표준프레임워크 4.0 기준에 맞춘 springboot 버전 2.7.0
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.63'
+
+    // 전자정부표준프레임워크 실행환경 라이브러리 의존성 추가
+    implementation 'org.egovframe.rte:org.egovframe.rte.ptl.mvc:4.1.0'
+    implementation 'org.egovframe.rte:org.egovframe.rte.psl.dataaccess:4.1.0'
+    implementation 'org.egovframe.rte:org.egovframe.rte.fdl.idgnr:4.1.0'
+    implementation 'org.egovframe.rte:org.egovframe.rte.fdl.property:4.1.0'
+    implementation 'org.antlr:antlr:3.5'
+    implementation 'org.hsqldb:hsqldb:2.5.2'
+
+    // 테스트 환경 의존성 추가
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
