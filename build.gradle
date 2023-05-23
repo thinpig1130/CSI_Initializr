@@ -37,7 +37,17 @@ dependencies {
     // 테스트 환경 의존성 추가
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+    // 프로젝트 구성을 위한 의존성 추가
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
+//    implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
+    implementation 'mysql:mysql-connector-java:8.0.29'
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
 }
 
 tasks.named('test') {
